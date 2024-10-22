@@ -23,7 +23,7 @@ class Mobil {
     }
 }
  
-public class Main {
+public class no_1 {
     public static void main(String[] args) {
         Mobil mobil1 = new Mobil("Toyota", "Merah"); 
         mobil1.tampilkanDetail();
