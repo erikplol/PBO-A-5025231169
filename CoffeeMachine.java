@@ -20,7 +20,7 @@ public class CoffeeMachine {
     };
 
     public void displayMenu() {
-        System.out.println("Available Coffee Menu:");
+        System.out.println("Coffee Menu:");
         for (int i = 0; i < coffeeMenu.length; i++) {
             System.out.println((i + 1) + ". " + coffeeMenu[i].type + "\tRp " + coffeeMenu[i].price);
         }
@@ -28,12 +28,12 @@ public class CoffeeMachine {
 
     public void addBalance(int amount) {
         balance = amount;
-        System.out.println("Your balance: Rp " + balance);
+        System.out.println("Balance: Rp " + balance);
     }
 
     public void buyCoffee(int coffeeIndex) {
         if (coffeeIndex < 1 || coffeeIndex > coffeeMenu.length) {
-            System.out.println("Invalid selection.");
+            System.out.println("Invalid selection, returning money.");
             return;
         }
 
@@ -41,7 +41,7 @@ public class CoffeeMachine {
         if (balance >= selectedCoffee.price) {
             int change = balance - selectedCoffee.price; 
             balance = 0; 
-            System.out.println("You bought a " + selectedCoffee.type + ".");
+            System.out.println("Your " + selectedCoffee.type + " is ready, enjoy!");
             if (change > 0) {
                 System.out.println("Your change: Rp " + change);
             } else {
